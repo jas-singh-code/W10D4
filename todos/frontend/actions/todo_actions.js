@@ -5,7 +5,7 @@ export const receiveTodos = (todos) => { //will be an array of todo objs ex: id:
     return {
       type: RECEIVE_TODOS,
       todos,
-    };
+    }; // the action object
   };
 
 export const receiveTodo = (todo) => {//single object
