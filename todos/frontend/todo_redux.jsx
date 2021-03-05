@@ -13,13 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const store = configureStore();
     ReactDOM.render(<Root store={store}/>, rootElement);
 
-    window.store = store;
-    console.log(allTodos(store.getState()));
-    window.selector = allTodos;
-    window.receiveTodos = receiveTodos;
-    window.receiveTodo = receiveTodo;
-    window.removeTodo = removeTodo;
-    window.receiveSteps = receiveSteps;
-    window.receiveStep = receiveStep;
-    window.removeStep = removeStep;
+    // window.store = store;
+    // console.log(allTodos(store.getState()));
+    // window.selector = allTodos;
+    // window.receiveTodos = receiveTodos;
+    // window.receiveTodo = receiveTodo;
+    // window.removeTodo = removeTodo;
+    // window.receiveSteps = receiveSteps;
+    // window.receiveStep = receiveStep;
+    // window.removeStep = removeStep;
 });
