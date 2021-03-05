@@ -1,4 +1,5 @@
 import React from 'react';
+import TodoListItem from '../todo_list/todo_list_item'
 
 class TodoList extends React.Component {
     constructor(props) {
@@ -6,16 +7,10 @@ class TodoList extends React.Component {
     };
 
     render() {
-        // debugger
 
         return (
             <div className="todo-list">
-                <ul>{
-                    // props.todos.map((todo) => {
-                    //     return <li key={todo.id}>Title: {todo.title}</li>
-                    //     })
-                    }
-                </ul>
+                <TodoListItem />
             </div>
         )
     }

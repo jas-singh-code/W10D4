@@ -6,7 +6,22 @@ import {RECEIVE_TODOS,
 //[{todo1}, {todo2}, ]
 // {1: {todo1}, 2: {todo2}}
 
-export const todosReducer =  (state = {}, action) => {
+const initialState = {
+    1: {
+      id: 1,
+      title: "wash car",
+      body: "with soap",
+      done: false
+    },
+    2: {
+      id: 2,
+      title: "wash dog",
+      body: "with shampoo",
+      done: true
+    }
+  };
+
+export const todosReducer =  (state = initialState, action) => {
     Object.freeze(state);
     const nextState = Object.assign({}, state)
     switch (action.type) {
