@@ -8,12 +8,11 @@ import Root from './components/root';
 
 document.addEventListener('DOMContentLoaded', () => {
     const rootElement = document.getElementById('root');
-
     // ReactDOM.render(<h1>Todos App</h1>, rootElement);
     const store = configureStore();
     ReactDOM.render(<Root store={store}/>, rootElement);
 
-    // window.store = store;
+    window.store = store;
     // console.log(allTodos(store.getState()));
     // window.selector = allTodos;
     // window.receiveTodos = receiveTodos;

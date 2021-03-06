@@ -8,7 +8,7 @@ const mapStateToProps = (state) => ({//getting state from react-redux like provi
 })
 
 const mapDispatchtoProps = dispatch => ({
-    receiveTodo: todo => dispatch(receiveTodo(todo)) // will exist in todoList props
+    receiveTodo: todo => dispatch(receiveTodo(todo)), // will exist in todoList props
 });
 
 export default connect(mapStateToProps, mapDispatchtoProps)(TodoList);

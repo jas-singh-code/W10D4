@@ -1,20 +1,14 @@
 import React from 'react';
+
 class TodoListItem extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props)
     }
-
+    
     render () {
-        debugger
-
-        return(
-            <div>
-                <ul>{
-                    this.props.todos.map((item) => {
-                        return <li key={item.id}>{item}</li>
-                    })
-                }</ul>
-            </div>
+        // debugger;
+        return (
+            <li>{this.props.todo.title}</li>
         )
     }
 }

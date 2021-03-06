@@ -5,7 +5,7 @@ import TodoListContainer from './todos/todo_list_container'
 const App = () => {
     return (
         <div>
-            <TodoListContainer  />
+            <TodoListContainer />
         </div>
     )
 }
