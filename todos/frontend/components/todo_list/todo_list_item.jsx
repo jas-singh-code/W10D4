@@ -1,13 +1,16 @@
 import React from 'react';
+import TodoDetailView from './todo_detail_view';
 
 class TodoListItem extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             status: "Done",
+            detail: false,
         }
         this.deleteTodo = this.deleteTodo.bind(this);
         this.toggleDone = this.toggleDone.bind(this);
+        this.showOrHide = this.showOrHide.bind(this);
     }
 
     deleteTodo(e) {
@@ -28,14 +31,30 @@ class TodoListItem extends React.Component {
             });
         }
     }
+
+    showOrHide(e) {
+        e.preventDefault();
+        if (!this.state.detail) { // if false
+            this.setState({
+                detail: true,
+            })
+        } else {
+            this.setState({
+                detail: false,
+            })
+        }
+    }
     
     render () {
-        // debugger;
+        
         return (
             <ul>
-                <li>Title: {this.props.todo.title}</li>
-                <p>Body: {this.props.todo.body}</p>
-                <input type="button" onClick={this.deleteTodo} value="Delete"/>
+                <li onClick={this.showOrHide}>
+                     Title: {this.props.todo.title} 
+                </li>
+                
+                 { this.state.detail ? <TodoDetailView body={this.props.todo.body} /> : null }
+                {/* <input type="button" onClick={this.deleteTodo} value="Delete"/> */}
                 <input type="button" onClick={this.toggleDone} value={this.state.status}/>
                 <br />
             </ul>
